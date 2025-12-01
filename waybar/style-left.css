@@ -1,0 +1,41 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  background-color: @background;
+  color: @foreground;
+
+  border: none;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 18px;
+}
+
+#waybar {
+  border-radius: 18px;
+  margin-left: 20px;
+}
+
+#waybar > box {
+  border-radius: 12px;
+}
+
+.modules-left {
+  margin-left: 12px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 9px;
+  margin: 0 2.25px;
+  min-width: 13.5px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#custom-omarchy {
+  min-width: 18px;
+  margin: 0 11.25px;
+}
+

@@ -1,0 +1,44 @@
+* {
+	color: @main-fg;
+}
+
+.module {
+	margin-bottom: -1.5px;
+}
+
+#waybar {
+	background-color: transparent;
+	border-radius: 0;
+}
+#waybar > box {
+	margin: 0;
+	background-color: transparent;
+	border-radius: 0;
+}
+
+button {
+	border-radius: 24px;
+	min-width: 24px;
+	padding: 0 15px;
+}
+button:hover {
+	background-color: @hover-bg;
+	color: @hover-fg;
+}
+
+tooltip {
+	border: 3px solid @main-br;
+	border-radius: 15px;
+	background-color: @main-bg;
+}
+tooltip > box {
+	padding: 0 9px;
+}
+
+#custom-spacer-gap1,
+#custom-spacer-gap2 {
+	background-color: transparent;
+	min-width: 400px;
+	padding: 0;
+	margin: 0;
+}

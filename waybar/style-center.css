@@ -1,0 +1,24 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  background-color: @background;
+  color: @foreground;
+
+  border: none;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 18px;
+}
+
+#waybar {
+  border-radius: 18px;
+}
+
+#waybar > box {
+  border-radius: 12px;
+}
+
+#clock {
+  margin: 0 13.125px;
+}
+

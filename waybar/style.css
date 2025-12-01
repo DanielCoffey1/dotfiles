@@ -1,0 +1,141 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  color: @foreground;
+
+  border: none;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 18px;
+}
+
+.modules-left {
+  margin-left: 12px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.modules-center {
+  background-color: transparent;
+  padding: 0;
+}
+
+.modules-right {
+  margin-right: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 0 12px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 9px;
+  margin: 0 2.25px;
+  min-width: 13.5px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#custom-omarchy {
+  min-width: 18px;
+  margin: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px 0 0 12px;
+  padding: 0 6px 0 12px;
+}
+
+#workspaces {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 12px 12px 0;
+  padding: 0 12px 0 6px;
+  margin-left: 0;
+}
+
+#cpu,
+#battery,
+#pulseaudio {
+  min-width: 18px;
+  margin: 0 0;
+}
+
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 18px;
+  margin: 0 11.25px;
+}
+
+#tray {
+  margin: 0 8px 0 16px;
+  padding: 0;
+}
+
+#tray > * {
+  margin: 0 6px;
+}
+
+#bluetooth,
+#network,
+#pulseaudio,
+#cpu,
+#battery {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 8px;
+}
+
+#custom-expand-icon {
+  margin-right: 27px;
+}
+
+tooltip {
+  padding: 3px;
+}
+
+#custom-update {
+  font-size: 15px;
+}
+
+#clock {
+  margin-left: 13.125px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 0 12px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 18px;
+  margin-left: 13.125px;
+  font-size: 15px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#waybar {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+#waybar > box {
+  background-color: transparent;
+  margin: 0;
+  border-radius: 0;
+}
+
+#custom-spacer-gap1,
+#custom-spacer-gap2 {
+  background-color: transparent;
+  min-width: 400px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  opacity: 1;
+}
