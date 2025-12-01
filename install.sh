@@ -5,7 +5,22 @@
 
 set -e
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Detect if script is being run from curl or from a cloned repo
+if [ -z "${BASH_SOURCE[0]}" ] || [ "${BASH_SOURCE[0]}" = "bash" ]; then
+    # Running from curl, need to clone the repo first
+    TEMP_DIR=$(mktemp -d)
+    DOTFILES_DIR="$TEMP_DIR/dotfiles"
+    CLEANUP_TEMP=true
+
+    echo "Cloning dotfiles repository..."
+    git clone https://github.com/DanielCoffey1/dotfiles.git "$DOTFILES_DIR" >/dev/null 2>&1
+    echo ""
+else
+    # Running from cloned repo
+    DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    CLEANUP_TEMP=false
+fi
+
 CONFIG_DIR="$HOME/.config"
 BACKUP_DIR="$HOME/.config_backup_$(date +%Y%m%d_%H%M%S)"
 INSTALL_PLYMOUTH=false
@@ -107,3 +122,8 @@ echo ""
 echo "Reload commands:"
 echo "  - Hyprland: hyprctl reload"
 echo "  - Waybar:   killall waybar && waybar &"
+
+# Cleanup temporary directory if created
+if [ "$CLEANUP_TEMP" = true ]; then
+    rm -rf "$TEMP_DIR"
+fi
