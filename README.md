@@ -16,19 +16,19 @@ My personal configuration files for Hyprland ecosystem and related tools.
 Install all configurations with a single command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/dotfiles/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/DanielCoffey1/dotfiles/master/install.sh | bash
 ```
 
 To include Plymouth theme (requires sudo):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/dotfiles/main/install.sh | bash -s -- --with-plymouth
+curl -fsSL https://raw.githubusercontent.com/DanielCoffey1/dotfiles/master/install.sh | bash -s -- --with-plymouth
 ```
 
 Or clone and install manually:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git
+git clone https://github.com/DanielCoffey1/dotfiles.git
 cd dotfiles
 ./install.sh
 
