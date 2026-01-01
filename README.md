@@ -2,6 +2,11 @@
 
 My personal configuration files for Arch Linux with Hyprland.
 
+## Screenshots
+
+![Desktop Setup](screenshots/dots1.png)
+![Application View](screenshots/dots2.png)
+
 ## System Information
 
 - **OS**: Arch Linux
