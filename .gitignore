@@ -1,0 +1,27 @@
+# Backup files
+*.backup
+*.bak
+*~
+
+# Cache directories
+.cache/
+cache/
+
+# Log files
+*.log
+
+# Secret/sensitive files
+*secret*
+*password*
+*token*
+.env
+credentials*
+
+# Editor temporary files
+.*.swp
+.*.swo
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,116 @@
+@import "../hypr/theme/waybar.css";
+
+* {
+  background-color: transparent;
+  color: @foreground;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+.modules-left {
+  margin-left: 0;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 2px 8px;
+  margin: 0;
+  min-width: 9px;
+  background-color: @background;
+  color: @foreground;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+
+#workspaces button.active {
+  border-bottom: 2px solid @foreground;
+}
+
+#workspaces button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+/* Base styling for all modules */
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update,
+#clock,
+#network,
+#bluetooth,
+#tray,
+#custom-expand-icon {
+  background-color: @background;
+  padding: 2px 8px;
+  border-radius: 0;
+  min-width: 12px;
+  margin: 0;
+}
+
+/* Left group - workspaces only */
+#workspaces button:first-child {
+  border-radius: 4px 0 0 0;
+}
+
+/* Clock on the right */
+#clock {
+  border-radius: 0 4px 4px 0;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator {
+  font-size: 10px;
+  border-radius: 0 4px 4px 0;
+  margin-right: 8px;
+}
+
+/* Right group - all icons grouped together */
+#custom-expand-icon {
+  border-radius: 4px 0 0 4px;
+}
+
+#battery {
+  border-radius: 0;
+}
+
+tooltip {
+  padding: 2px;
+  background-color: @background;
+  border-radius: 4px;
+}
+
+.tray-group-item {
+  background-color: @background;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}

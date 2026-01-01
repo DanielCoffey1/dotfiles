@@ -1,0 +1,135 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{name}";
+    font: "monospace 12";
+}
+
+* {
+    bg: #1a1a1a66;
+    bg-alt: #00000040;
+    bg-selected: #8085d680;
+    fg: #ffffff;
+    fg-alt: #ffffffaa;
+
+    accent: #8085d6;
+    accent-translucent: #8085d666;
+
+    /* Override default colors */
+    background: transparent;
+    foreground: @fg;
+    normal-background: transparent;
+    normal-foreground: @fg;
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: @fg;
+    selected-normal-background: @bg-selected;
+    selected-normal-foreground: @fg;
+
+    background-color: transparent;
+    text-color: @fg;
+
+    border-radius: 12px;
+    border-color: @accent;
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    border: 0px;
+    border-radius: 12px;
+    padding: 20px;
+    width: 18%;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    text-color: @fg;
+    border: 0px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    children: [entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent;
+    padding: 0px 12px 0px 0px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+    horizontal-align: 0.5;
+}
+
+listview {
+    background-color: transparent;
+    lines: 10;
+    spacing: 4px;
+    scrollbar: false;
+    border: 0px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 10px 16px;
+    horizontal-align: 0.5;
+}
+
+element selected {
+    background-color: @bg-selected;
+    text-color: @fg;
+    border: 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 24px;
+    padding: 0px 12px 0px 0px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @bg-selected;
+    text-color: @fg;
+}
+
+/* Remove dots/dashes */
+message {
+    border: 0px;
+}
+
+textbox {
+    background-color: transparent;
+}
+
+scrollbar {
+    handle-width: 0px;
+    width: 0px;
+}
